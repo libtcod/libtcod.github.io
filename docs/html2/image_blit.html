@@ -12,7 +12,7 @@
 </div>
 <div class="breadcrumb"><div class="breadcrumbtext"><p>
 you are here: <a onclick="link('../index2.html')">Index</a> &gt; <a onclick="link('image.html')">5. Image toolkit</a> &gt; <a onclick="link('image_blit.html')">5.5. Blitting an image on a console</a><br>
-<a class="prev" onclick="link('image_save.html')">5.4. Saving an image to a bmp or png file.</a> 
+<a class="prev" onclick="link('image_save.html')">5.4. Saving an image to a bmp or png file.</a>
 </p></div></div>
 <div class="filter"><input type="checkbox" id="chk_c" name="chk_c" onchange="enable('c',this.checked)" checked='checked' ><label  for='chk_c'> C   </label><input type="checkbox" id="chk_cpp" name="chk_cpp" onchange="enable('cpp',this.checked)" checked='checked' ><label  for='chk_cpp'> C++   </label><input type="checkbox" id="chk_py" name="chk_py" onchange="enable('py',this.checked)" checked='checked' ><label  for='chk_py'> Py   </label><input type="checkbox" id="chk_lua" name="chk_lua" onchange="enable('lua',this.checked)"  disabled='disabled'><label class='disabled' for='chk_lua'> Lua   </label><input type="checkbox" id="chk_cs" name="chk_cs" onchange="enable('cs',this.checked)"  disabled='disabled'><label class='disabled' for='chk_cs'> C#   </label></div>
 <div class="main"><div class="maintext">
@@ -56,10 +56,10 @@ you are here: <a onclick="link('../index2.html')">Index</a> &gt; <a onclick="lin
 <p class="py">pix<span class="code-symbol"> =</span> libtcod<span class="code-symbol">.</span>image_new<span class="code-symbol">(</span><span class="code-value">10</span><span class="code-symbol">,</span><span class="code-value">10</span><span class="code-symbol">)</span><br />libtcod<span class="code-symbol">.</span>image_set_key_color<span class="code-symbol">(</span>pix<span class="code-symbol">,</span>libtcod<span class="code-symbol">.</span>red<span class="code-symbol">)</span><br />libtcod<span class="code-symbol">.</span>image_blit_rect<span class="code-symbol">(</span>pix<span class="code-symbol">,</span><span class="code-value">0</span><span class="code-symbol">,</span><span class="code-value">40</span><span class="code-symbol">,</span><span class="code-value">25</span><span class="code-symbol">,</span><span class="code-value">5</span><span class="code-symbol">,</span><span class="code-value">5</span><span class="code-symbol">,</span>libtcod<span class="code-symbol">.</span><span class="code-tcod">BKGND_SET</span><span class="code-symbol">)</span></p>
 </div><hr>
 <a name="3"></a><h3>Blitting with subcell resolution</h3>
-<p>Eventually, you can use some special characters in the libtcod fonts :<br />		<img src="subcell.png"><br />		to double the console resolution using this blitting function.<br />		<table><tr><td> 
-		Comparison before/after subcell resolution in TCOD :<br /> 
-		<img src="subcell_comp.png"></td><td> 
-		Pyromancer ! screenshot, making full usage of subcell resolution :<br /> 
+<p>Eventually, you can use some special characters in the libtcod fonts :<br />		<img src="subcell.png"><br />		to double the console resolution using this blitting function.<br />		<table><tr><td>
+		Comparison before/after subcell resolution in TCOD :<br />
+		<img src="subcell_comp.png"></td><td>
+		Pyromancer ! screenshot, making full usage of subcell resolution :<br />
 		<img src="subcell_pyro.png"></td></tr></table><br />	</p>
 <div class="code"><p class="cpp"><span class="code-keyword">void</span> TCODImage<span class="code-symbol">::</span>blit2x<span class="code-symbol">(</span>TCODConsole<span class="code-symbol"> *</span>dest<span class="code-symbol">,</span><span class="code-keyword"> int</span> dx<span class="code-symbol">,</span><span class="code-keyword"> int</span> dy<span class="code-symbol">,</span><span class="code-keyword"> int</span> sx<span class="code-symbol">=</span><span class="code-value">0</span><span class="code-symbol">,</span><span class="code-keyword"> int</span> sy<span class="code-symbol">=</span><span class="code-value">0</span><span class="code-symbol">,</span><span class="code-keyword"> int</span> w<span class="code-symbol">=</span><span class="code-value">-1</span><span class="code-symbol">,</span><span class="code-keyword"> int</span> h<span class="code-symbol">=</span><span class="code-value">-1</span><span class="code-symbol"> )</span><span class="code-keyword"> const</span><span class="code-symbol">;</span></p>
 <p class="c"><span class="code-keyword">void</span> TCOD_image_blit_2x<span class="code-symbol">(</span><span class="code-tcod">TCOD_image_t</span> image<span class="code-symbol">,</span><span class="code-tcod"> TCOD_console_t</span> dest<span class="code-symbol">,</span><span class="code-keyword"> int</span> dx<span class="code-symbol">,</span><span class="code-keyword"> int</span> dy<span class="code-symbol">,</span><span class="code-keyword"> int</span> sx<span class="code-symbol">,</span><span class="code-keyword"> int</span> sy<span class="code-symbol">,</span><span class="code-keyword"> int</span> w<span class="code-symbol">,</span><span class="code-keyword"> int</span> h<span class="code-symbol">)</span><span class="code-symbol">;</span></p>
@@ -74,7 +74,7 @@ you are here: <a onclick="link('../index2.html')">Index</a> &gt; <a onclick="lin
 <div class="footer"><div class="footertext">
 	<p>libtcod 1.6.4, &copy; 2008, 2009, 2010, 2012, 2017 Jice, Mingos & rmtew<br>
 	This file has been generated by doctcod.</p>
-	<p><table width='100%'><tr><td width="33%"><a href="https://bitbucket.org/libtcod/libtcod">libtcod website</a></td>
+	<p><table width='100%'><tr><td width="33%"><a href="https://github.com/libtcod/libtcod">libtcod website</a></td>
 	<td width="33%"><a href="https://www.reddit.com/r/roguelikedev">libtcod on /r/roguelikedev</a></td>
 	<td width="33%">libtcod tutorials [&nbsp;<a href="http://www.roguebasin.com/index.php?title=Complete_Roguelike_Tutorial,_using_python%2Blibtcod">Python</a>&nbsp;|&nbsp;<a href="http://www.roguebasin.com/index.php?title=Complete_roguelike_tutorial_using_C%2B%2B_and_libtcod_-_part_1:_setting_up">C++</a>&nbsp;]</td>
   </tr></table></p>
