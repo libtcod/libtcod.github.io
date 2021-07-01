@@ -9,6 +9,10 @@ There are multiple tools to do this with, but this example will use [PyInstaller
 
 This assumes you have a project started with a `main.py` script, and that all your data assets are in a directory called `data`.
 
+The following files have been setup for all parts of the 2021 tutorial.
+
+## Building locally
+
 First you need to install [PyInstaller](https://www.pyinstaller.org/) using pip.
 You can do this with the command: `pip install pyinstaller`
 
@@ -70,4 +74,252 @@ This will affect the executable name and the distribution directory name.
 
 An `icon` is optional and that line can be deleted, otherwise `icon.ico` can be downloaded from [here](https://raw.githubusercontent.com/TStand90/tcod_tutorial_v2/fd2364dbf184ea83f571c96110dc35c5349ade1d/icon.ico) and put in the project directory.
 
-This has been setup for all parts of the 2021 tutorial.
+## Automated builds
+
+{% raw %}
+
+If your project is hosted publicly on GitHub then you can play around with automated builds.
+[GitHub Actions](https://docs.github.com/en/actions) will be used for this example, and although there are several other options available, this is probably the easiest method for the current setup and the target platforms.
+
+This workflow will setup the requirements for the project, build it with `/build.spec` from above, then zip and upload the results.
+
+`.github/workflows/python-package.yml`
+```yaml
+# /.github/workflows/python-package.yml
+# https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: Deploy
+
+on: [push, pull_request]
+
+defaults:
+  run:
+    shell: bash
+
+env:
+  python-version: "3.8"
+  pyinstaller-version: "4.3"
+  project-name: roguelike-tutorial
+
+jobs:
+  package:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-2019
+            platform-name: windows.x64
+          - os: macos-10.15
+            platform-name: macos.x64
+          - os: ubuntu-20.04
+            platform-name: linux.x64
+    steps:
+      - name: Checkout code
+        # fetch-depth=0 and v1 are needed for 'git describe' to work correctly.
+        uses: actions/checkout@v1
+        with:
+          fetch-depth: 0
+      - name: Set archive name
+        run: |
+          ARCHIVE_NAME=${{ env.project-name }}-`git describe --always`-${{ matrix.platform-name }}
+          echo "Archive name set to: $ARCHIVE_NAME"
+          echo "archive-name=$ARCHIVE_NAME" >> $GITHUB_ENV
+      - name: Set up Python ${{ env.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ env.python-version }}
+      - name: Install APT dependencies
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install libsdl2-dev
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install PyInstaller==${{ env.pyinstaller-version }} -r requirements.txt
+      - name: Run PyInstaller
+        env:
+          PYTHONOPTIMIZE: 1 # Enable optimizations as if the -O flag is given.
+          PYTHONHASHSEED: 42 # Try to ensure deterministic results.
+        run: |
+          pyinstaller build.spec
+      # This step exists for debugging.  Such as checking if data files were included correctly by PyInstaller.
+      - name: List distribution files
+        run: |
+          find dist
+      # Archive the PyInstaller build using the appropriate tool for the platform.
+      - name: Tar files
+        if: runner.os != 'Windows'
+        run: |
+          tar --format=ustar -czvf ${{ env.archive-name }}.tar.gz dist/*/
+      - name: Archive files
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          Compress-Archive dist/*/ ${{ env.archive-name }}.zip
+      # Upload archives as artifacts, these can be downloaded from the GitHub actions page.
+      - name: "Upload Artifact"
+        uses: actions/upload-artifact@v2
+        with:
+          name: automated-builds
+          path: ${{ env.archive-name }}.*
+          retention-days: 7
+          if-no-files-found: error
+      # If a tag is pushed then a new archives are uploaded to GitHub Releases automatically.
+      - name: Upload release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ${{ env.archive-name }}.*
+          file_glob: true
+          tag: ${{ github.ref }}
+          overwrite: true
+```
+You can copy the above verbatim and it will work, but it might be good to understand how it works if you've never seen this kind of script before.
+The following will be an explanation of the individual parts.
+
+```yaml
+on: [push, pull_request]
+```
+This triggers the workflow whenever commits are pushed to the repository as well as whenever a pull request is made.
+Triggering on a pull request is useful since a malformed PR will crash the build process and this will be reported on the pull request.
+
+```yaml
+defaults:
+  run:
+    shell: bash
+```
+[The shell used changes depending on the platform](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#using-a-specific-shell).
+For this workflow we'll default to `bash`-like syntax for [commands](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstepsrun).
+
+```yaml
+env:
+  python-version: "3.8"
+  pyinstaller-version: "4.3"
+  project-name: roguelike-tutorial
+```
+This is here to organize some important constants.
+Consider changing the `project-name`, and if necessary the `python-version`.
+
+```yaml
+jobs:
+  package:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-2019
+            platform-name: windows.x64
+          - os: macos-10.15
+            platform-name: macos.x64
+          - os: ubuntu-20.04
+            platform-name: linux.x64
+    env:
+      archive-name: roguelike-tutorial-${{ matrix.platform-name }}
+```
+This is a pretty typical matrix setup.
+The important parts are that this will run a job for each `os`, and with `fail-fast: false` these will try to build as much as possible even if one job fails.
+`platform-name` is added to the archives, so that you'll know which is which.
+
+```yaml
+    steps:
+      - name: Checkout code
+        # fetch-depth=0 and v1 are needed for 'git describe' to work correctly.
+        uses: actions/checkout@v1
+        with:
+          fetch-depth: 0
+      - name: Set archive name
+        run: |
+          ARCHIVE_NAME=${{ env.project-name }}-`git describe --always`-${{ matrix.platform-name }}
+          echo "Archive name set to: $ARCHIVE_NAME"
+          echo "archive-name=$ARCHIVE_NAME" >> $GITHUB_ENV
+```
+[actions/checkout](https://github.com/actions/checkout) automatically clones the repository.
+This workflow uses [git describe](https://git-scm.com/docs/git-describe) to add version info to the archive, so several things need to be accounted for.
+An old regression with how tags are checked out with `actions/checkout` means `v1` has to be used so that `git describe` is supported.
+
+`Set archive name` sets the final name for the archive without the extension.
+[$GITHUB_ENV](https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#setting-an-environment-variable) makes the name available for the following steps.
+
+```yaml
+      - name: Set up Python ${{ env.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ env.python-version }}
+      - name: Install APT dependencies
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install libsdl2-dev
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install PyInstaller==${{ env.pyinstaller-version }} -r requirements.txt
+      - name: Run PyInstaller
+        env:
+          PYTHONOPTIMIZE: 1 # Enable optimizations as if the -O flag is given.
+          PYTHONHASHSEED: 42 # Try to ensure deterministic results.
+        run: |
+          pyinstaller build.spec
+```
+This reproduces the commands you would normally use to build the project locally.
+On Linux `libsdl2-dev` needs to be installed for `tcod`, then you install from `requirements.txt`, then you install `PyInstaller`, then you run `pyinstaller build.spec`.
+
+Small tweaks are added in an attempt to get a more deterministic build.
+
+```yaml
+      # Archive the PyInstaller build using the appropriate tool for the platform.
+      - name: Tar files
+        if: runner.os != 'Windows'
+        run: |
+          tar --format=ustar -czvf ${{ env.archive-name }}.tar.gz dist/*/
+      - name: Archive files
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          Compress-Archive dist/*/ ${{ env.archive-name }}.zip
+```
+This zips the archive.
+Windows gets an archive with `.zip`, this briefly switches to PowerShell for a convenient archive command.
+All other platforms make a `.tar.gz`.
+`.tar` has multiple formats, and programs like 7-zip have a hard time opening the more modern ones, `--format=ustar` is used to prevent issues.
+
+```yaml
+      # Upload archives as artifacts, these can be downloaded from the GitHub actions page.
+      - name: "Upload Artifact"
+        uses: actions/upload-artifact@v2
+        with:
+          name: automated-builds
+          path: ${{ env.archive-name }}.*
+          retention-days: 7
+          if-no-files-found: error
+```
+This uploads the archives to the job itself.
+After the job is finished you can go to your GitHub repository and go to the Actions tab, then to the job, then you can download `automated-builds`.
+
+These files are not kept forever, the next step deals with that:
+
+```yaml
+      # If a tag is pushed then a new archives are uploaded to GitHub Releases automatically.
+      - name: Upload release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ${{ env.archive-name }}.*
+          file_glob: true
+          tag: ${{ github.ref }}
+          overwrite: true
+```
+When a tag is pushed then the archives will also be uploaded to a GitHub Releases page based on the tag.
+These are more permanent and this is useful way to make a real release, just [make an annotated tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging) and push it to the repository.
+
+Because `git describe` was used the archive name will include the name of the tag, so the tag should be a version number, release date, or some other kind of release name.
+
+That's the end of the explanation on automated builds.
+Keep in mind that this doesn't check that executables actually run, and no other tests are run other than checking that the build succeeds.
+
+{% endraw %}
