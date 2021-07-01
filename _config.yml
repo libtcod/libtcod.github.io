@@ -28,9 +28,9 @@ repository: libtcod/libtcod.github.io
 twitter_username: HexDecimal_
 github_username: HexDecimal
 github:
+  is_project_page: true
   owner_name: HexDecimal
   owner_url: https://github.com/HexDecimal
-
 # Build settings
 theme: jekyll-theme-cayman
 plugins:
