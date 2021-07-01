@@ -24,12 +24,15 @@ description: >- # this means to ignore newlines until "baseurl:"
   A website that hosts some libtcod-related projects.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://libtcod.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-repository: libtcod/libtcod
+repository: libtcod/libtcod.github.io
 twitter_username: HexDecimal_
 github_username: HexDecimal
+github:
+  owner_name: HexDecimal
+  owner_url: https://github.com/HexDecimal
 
 # Build settings
-theme: minima
+theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
 

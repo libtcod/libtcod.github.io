@@ -6,4 +6,6 @@ layout: default
 ---
 The libtcod 1.6.4 docs are hosted [here](docs/index2.html?c=true&cpp=true).
 
+The 2021 Python tutorial is [here](tutorials/python/2021).
+
 All other libtcod stuff can be found [here](https://github.com/libtcod).

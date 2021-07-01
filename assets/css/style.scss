@@ -1,0 +1,16 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.page-header {
+    padding: 0; // Reduce the ridiculously huge banner size.
+}
+
+.project-tagline {
+    display: none; // Remove the tagline.
+}
+
+.main-content {
+    max-width: 66rem; // Slightly increase max width so that code examples fit.
+}
