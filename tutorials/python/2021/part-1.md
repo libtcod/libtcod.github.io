@@ -1,3 +1,7 @@
+---
+toc: true
+---
+
 # Part 1 - Drawing the '@' symbol and moving it around
 
 Welcome to part 1 of this tutorial! This series will help you create your very first roguelike game, written in Python\!

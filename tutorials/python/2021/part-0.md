@@ -1,9 +1,10 @@
 ---
+toc: true
 ---
 
 # Part 0 - Setting Up
 
-#### Prior knowledge
+## Prior knowledge
 
 This tutorial assumes some basic familiarity with programming in general, and with Python.
 If you've never used Python before, this tutorial could be a little confusing. There are many free resources online about learning programming and Python, and I'd recommend learning about objects and functions in Python at the very least before attempting to read this tutorial.
@@ -14,7 +15,7 @@ The Python documentation [includes a good tutorial to get started with Python](h
 You should keep track of the [Python Documentation](https://docs.python.org/3/), the [NumPy Documentation](https://numpy.org/doc/stable/), and the [python-tcod Documentation](https://python-tcod.readthedocs.io/en/latest/).
 External references to these will be made throughout the tutorial as they become relevant.
 
-#### Installation
+## Installation
 
 To do this tutorial, you'll need Python version 3.8 or higher.
 The latest version of Python is recommended (currently 3.9 as of June 2021).
@@ -49,7 +50,7 @@ For example, Ubuntu can install it with the following command:
 
 `sudo apt-get install libsdl2-dev`
 
-#### Editors
+## Editors
 
 Any text editor can work for writing Python.
 You could even use Notepad if you really wanted to.
@@ -57,7 +58,7 @@ Personally, I'm a fan of [Pycharm](https://www.jetbrains.com/pycharm/) and [Visu
 Whatever you choose, I strongly recommend something that can help catch Python syntax errors at the very least.
 I've been working with Python for over five years, and I still make these types of mistakes all the time\!
 
-#### Making sure Python works
+## Making sure Python works
 
 To verify that your installation of both Python 3 and TCOD are working, create a new file (in whatever directory you plan on using for the tutorial) called `main.py`, and enter the following text into it:
 
@@ -80,7 +81,7 @@ Run the file in your terminal (or alternatively in your editor, if possible):
 
 You should see "Hello World\!" printed out to the terminal. If you receive an error, there is probably an issue with either your Python or TCOD installation.
 
-### Downloading the Image File
+## Downloading the Image File
 
 For this tutorial, we'll need an image file. The default one is provided below.
 
@@ -89,13 +90,13 @@ For this tutorial, we'll need an image file. The default one is provided below.
 Right click the image and save it to `/data/dejavu16x16_gs_tc.png` in your project directory.
 Other options for fonts [are available here](https://github.com/libtcod/libtcod/tree/master/data/fonts), but you'll need a font ending in `_tc.png` for this tutorial.
 
-### Getting help
+## Getting help
 
 Be sure to check out the [Roguelike Development Subreddit](https://www.reddit.com/r/roguelikedev) for help.
 There's a link there to the Discord channel as well.
 
 -----
 
-### Ready to go?
+## Ready to go?
 
 Once you're set up and ready to go, you can proceed to [Part 1](part-1).
