@@ -3,14 +3,23 @@
 
 @import "{{ site.theme }}";
 
-.page-header {
-    padding: 0; // Reduce the ridiculously huge banner size.
+code {
+    background-color: #191919 // Add background to inline code samples.
 }
 
-.project-tagline {
-    display: none; // Remove the tagline.
+.wrapper {
+    max-width: 60rem; // Increase max width so that code examples fit.
 }
 
-.main-content {
-    max-width: 66rem; // Slightly increase max width so that code examples fit.
+#header nav {
+    max-width: 60rem;
+}
+
+section {
+    max-width: 100%; // Match .wrapper width.
+}
+
+.nav_button {
+    float: left;
+    margin-right: 6px;
 }

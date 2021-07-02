@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Libtcod
+title: libtcod.github.io
 email: 4b796c65+libtcod@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   A website that hosts some libtcod-related projects.
@@ -32,8 +32,13 @@ github:
   owner_name: HexDecimal
   owner_url: https://github.com/HexDecimal
 google_analytics: G-C2YXLNQ21C
+navigation:
+  - title: Home
+    url: /
+  - title: Python tutorial 2021
+    url: /tutorials/python/2021
 # Build settings
-theme: jekyll-theme-cayman
+theme: jekyll-theme-midnight
 plugins:
   - jekyll-feed
 # Exclude from processing.
