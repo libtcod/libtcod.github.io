@@ -31,6 +31,7 @@ github:
   is_project_page: true
   owner_name: HexDecimal
   owner_url: https://github.com/HexDecimal
+google_analytics: G-C2YXLNQ21C
 # Build settings
 theme: jekyll-theme-cayman
 plugins:
