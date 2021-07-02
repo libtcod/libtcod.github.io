@@ -61,7 +61,7 @@ I've been working with Python for over five years, and I still make these types 
 
 To verify that your installation of both Python 3 and TCOD are working, create a new file (in whatever directory you plan on using for the tutorial) called `main.py`, and enter the following text into it:
 
-```py3
+```python
 #!/usr/bin/env python3
 import tcod
 
