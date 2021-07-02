@@ -11,11 +11,20 @@ code {
     max-width: 60rem; // Increase max width so that code examples fit.
 }
 
-#header nav {
-    max-width: 60rem;
+#header {
+    position: relative;
+    height: 52px;
+
+    nav {
+        margin: 0px auto;
+        max-width: 60rem;
+    }
 }
 
+
 section {
+    margin-top: 0px;
+    padding-top: 6px;
     max-width: 100%; // Match .wrapper width.
 }
 
@@ -23,3 +32,19 @@ section {
     float: left;
     margin-right: 6px;
 }
+
+.credits {
+    font-size: 11px;
+    font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    color: #696969;
+    margin-top: -10px;
+
+    &.left {
+      float: left;
+    }
+
+    &.right {
+      float: right;
+    }
+  }

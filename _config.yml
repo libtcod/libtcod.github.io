@@ -40,6 +40,7 @@ navigation:
 # Build settings
 theme: jekyll-theme-midnight
 plugins:
+  - jekyll-toc
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

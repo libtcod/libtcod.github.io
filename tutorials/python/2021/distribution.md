@@ -1,5 +1,6 @@
 ---
 title: "Distributing Python programs with PyInstaller"
+toc: true
 ---
 
 # Distributing Python programs with PyInstaller
