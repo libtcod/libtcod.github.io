@@ -72,7 +72,7 @@ This will affect the executable name and the distribution directory name.
 
 `datas=[("data", "data")]` will copy all files from the data directory (first `"data"`) to the data directory of the distribution (second `"data"`.)
 
-An `icon` is optional and that line can be deleted, otherwise `icon.ico` can be downloaded from [here](https://raw.githubusercontent.com/TStand90/tcod_tutorial_v2/fd2364dbf184ea83f571c96110dc35c5349ade1d/icon.ico) and put in the project directory.
+An `icon` is optional and that line can be deleted, otherwise `icon.ico` can be downloaded from [here](https://raw.githubusercontent.com/TStand90/tcod_tutorial_v2/fd2364dbf184ea83f571c96110dc35c5349ade1d/icon.ico) (right click and save as) and put in the project directory.
 
 ## Automated builds
 
