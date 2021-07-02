@@ -86,7 +86,7 @@ For this tutorial, we'll need an image file. The default one is provided below.
 
 ![Font File](https://raw.githubusercontent.com/libtcod/libtcod/master/data/fonts/dejavu16x16_gs_tc.png)
 
-Right click the image and save it to the same directory that you're planning on placing your code in.
+Right click the image and save it to `/data/dejavu16x16_gs_tc.png` in your project directory.
 Other options for fonts [are available here](https://github.com/libtcod/libtcod/tree/master/data/fonts), but you'll need a font ending in `_tc.png` for this tutorial.
 
 ### Getting help
