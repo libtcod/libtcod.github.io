@@ -211,6 +211,8 @@ Contexts must be closed once you're done with them, but the `with` statement wil
 
 Then a [tcod.Console](https://python-tcod.readthedocs.io/en/latest/tcod/console.html#tcod.console.Console) is created with the same size that was given to `tcod.context.new`,
 `order="F"` sets the console arrays to be indexed in `x, y` order.
+This is a convenient way to handle array indexes so we'll use `order="F"` a lot when working with NumPy.
+You might wonder why `order="F"` isn't the default [and there is an explanation for that](https://numpy.org/doc/stable/reference/internals.html#multidimensional-array-indexing-order-issues).
 These arrays are not being used yet.
 
 Now with `while True:` the game-loop begins, with the only way of existing this loop normally being the `SystemExit` exceptions implemented earlier.
@@ -229,3 +231,5 @@ It can then unpack its values and checks if the destination is in the bounds of 
 You can see the current progress of this code in its entirety [here](https://github.com/TStand90/tcod_tutorial_v2/tree/2021/part-1).
 
 Part-2 isn't available yet, [but you can setup distribution in the meantime](distribution).
+
+[Return to the hub](.).

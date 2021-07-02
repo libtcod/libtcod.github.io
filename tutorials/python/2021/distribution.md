@@ -324,3 +324,5 @@ That's the end of the explanation on automated builds.
 Keep in mind that this doesn't check that executables actually run, and no other tests are run other than checking that the build succeeds.
 
 {% endraw %}
+
+[Return to the hub](.).
