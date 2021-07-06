@@ -11,12 +11,14 @@ The event is still ongoing.
 It isn't unusual for tcod to be updated during the event, so you might have to upgrade it has you progress on this version of the tutorial.
 Earlier pages may also be updated at times.
 
+You can point out or fix typos by [making an issue or pull request](https://github.com/libtcod/libtcod.github.io).  Code suggestions go [here](https://github.com/TStand90/tcod_tutorial_v2) instead.
+
 ## Main Tutorial:
 
   - [Part 0 - Setting Up](part-0)
   - [Part 1 - Drawing the ‘@’ symbol and moving it around](part-1)
-  - Part 2 - The generic Entity, the render functions, and the map (July 6th)
-  - Part 3 - Generating a dungeon
+  - [Part 2 - The generic Entity, the render functions, and the map](part-2)
+  - [Part 3 - Generating a dungeon](part-3)
   - Part 4 - Field of view (July 13th)
   - Part 5 - Placing enemies and kicking them (harmlessly)
   - Part 6 - Doing (and taking) some damage (July 20th)
