@@ -174,7 +174,7 @@ With the generator setup it is now time to update `/main.py` to use it:
 ```diff
 
  import game.entity
- import game.game_map
+-import game.game_map
  import game.input_handlers
 +import game.procgen
 
@@ -220,6 +220,6 @@ The `enter_xy` tuple is unpacked into the function call, so the tuple is spread 
 
 You can see the current progress of this code in its entirety [here](https://github.com/TStand90/tcod_tutorial_v2/tree/2021/part-3).
 
-Part 4 is still in development.
+[Continue to part 4](part-4).
 
 [Return to the hub](.).
