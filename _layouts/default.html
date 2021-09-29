@@ -33,15 +33,17 @@
 <body>
   <div id="header">
     <nav>
-      {% for item in site.navigation %}
-      <li class="nav_button"><a href="{{ item.url }}">{{ item.title }}</a></li>
-      {% endfor %}
-      <li class="downloads"><a href="{{ site.github.repository_url }}">View On GitHub</a></li>
-      {% if site.show_downloads %}
-      <li class="downloads"><a href="{{ site.github.zip_url }}">ZIP</a></li>
-      <li class="downloads"><a href="{{ site.github.tar_url }}">TAR</a></li>
-      <li class="title">DOWNLOADS</li>
-      {% endif %}
+      <ul>
+        {% for item in site.navigation %}
+        <li class="nav_button"><a href="{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
+        <li class="downloads"><a href="{{ site.github.repository_url }}">View On GitHub</a></li>
+        {% if site.show_downloads %}
+        <li class="downloads"><a href="{{ site.github.zip_url }}">ZIP</a></li>
+        <li class="downloads"><a href="{{ site.github.tar_url }}">TAR</a></li>
+        <li class="title">DOWNLOADS</li>
+        {% endif %}
+      </ul>
     </nav>
   </div><!-- end header -->
 
