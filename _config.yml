@@ -38,6 +38,7 @@ navigation:
   - title: Python tutorial 2021
     url: /tutorials/python/2021
 # Build settings
+remote_theme: pages-themes/midnight@v0.2.0
 theme: jekyll-theme-midnight
 plugins:
   - jekyll-toc
