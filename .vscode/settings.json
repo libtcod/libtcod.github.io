@@ -1,3 +1,17 @@
 {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "files.insertFinalNewline": true,
+    "[scss]": {
+        "editor.formatOnSave": false,
+    },
+    "cSpell.words": [
+        "CHARMAP",
+        "isinstance",
+        "tcod",
+        "tileset",
+        "tilesets",
+        "tilesheet"
+    ]
 }
