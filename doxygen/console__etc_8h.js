@@ -1,7 +1,7 @@
 var console__etc_8h =
 [
-    [ "TCOD_console_check_for_keypress", "console__etc_8h.html#ad45b93a5954a0def4129c5984b3b8481", null ],
-    [ "TCOD_console_credits_render_ex", "console__etc_8h.html#a6bc796ed5f145c3e6929f3bc5063ef0f", null ],
+    [ "TCOD_console_check_for_keypress", "console__etc_8h.html#a65e53799b816a806ed64ac440125a1ac", null ],
+    [ "TCOD_console_credits_render_ex", "console__etc_8h.html#a5990ad68c84f01878ad612fd4e8e4066", null ],
     [ "TCOD_console_flush", "console__etc_8h.html#a3c4383f70ee71cfe4364f0be1c07071b", null ],
     [ "TCOD_console_flush_ex", "console__etc_8h.html#aea8bbab66b81033f4ec14eab5797105e", null ],
     [ "TCOD_console_get_fade", "console__etc_8h.html#a96ddc91949788d2a160782c215da2673", null ],

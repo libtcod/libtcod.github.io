@@ -5,7 +5,7 @@ var group___list =
       [ "array", "struct_t_c_o_d___list.html#ab43b95ef1778c4aee0808d65d8a3486a", null ],
       [ "fillSize", "struct_t_c_o_d___list.html#a83a69ff5cb8dc828488e090d695458e3", null ]
     ] ],
-    [ "TCODList< T >", "class_t_c_o_d_list.html", [
+    [ "TCODList&lt; T &gt;", "class_t_c_o_d_list.html", [
       [ "TCODList", "class_t_c_o_d_list.html#a37cc708679f513feec27be8e448b1024", null ],
       [ "TCODList", "class_t_c_o_d_list.html#a19ceb0a8f8cb58b02ddc90a4a71f4fe6", null ],
       [ "~TCODList", "class_t_c_o_d_list.html#a5cae14208575f4c193b9194c6a5cc981", null ],

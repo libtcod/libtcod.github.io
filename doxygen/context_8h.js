@@ -16,5 +16,6 @@ var context_8h =
     [ "TCOD_context_screen_capture", "context_8h.html#a0ce8fa88b6f748d4e515cbe1a555e344", null ],
     [ "TCOD_context_screen_capture_alloc", "context_8h.html#a03c0b631860dc309d2c5fb395330d3d0", null ],
     [ "TCOD_context_screen_pixel_to_tile_d", "context_8h.html#afdddc740b32e6b1f62f7501210006377", null ],
-    [ "TCOD_context_screen_pixel_to_tile_i", "context_8h.html#a6368becf2526f358ec0caad828232d3d", null ]
+    [ "TCOD_context_screen_pixel_to_tile_i", "context_8h.html#a6368becf2526f358ec0caad828232d3d", null ],
+    [ "TCOD_context_set_mouse_transform", "context_8h.html#a82259ded6f925387019bcc7b9a712ec4", null ]
 ];

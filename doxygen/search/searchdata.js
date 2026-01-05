@@ -1,18 +1,18 @@
 var indexSectionsWithContent =
 {
-  0: "abcdefghiklmnoprstuvwz~",
+  0: "123568:abcdefghiklmnoprstuvwxyz~",
   1: "bcimtw",
   2: "t",
   3: "bcefghilmnprstuvwz",
   4: "abcdefghiklmnoprstuvw~",
-  5: "abcefhikmoprstuvw",
+  5: "abcdefhiklmoprstuvwx",
   6: "cit",
   7: "t",
   8: "ft",
   9: "s",
   10: "t",
-  11: "bcflprt",
-  12: "dlu"
+  11: "bcdfglnoprstuv",
+  12: "123568:abcdefghiklmnoprstuvwxy"
 };
 
 var indexSectionNames =

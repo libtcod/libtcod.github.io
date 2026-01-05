@@ -1,7 +1,6 @@
 var class_t_c_o_d_height_map =
 [
     [ "TCODHeightMap", "class_t_c_o_d_height_map.html#a2a0363ed2695d5c198388924cedbce97", null ],
-    [ "~TCODHeightMap", "class_t_c_o_d_height_map.html#ae4b8933c1666dca4d7f4055eaf7b3c0b", null ],
     [ "add", "class_t_c_o_d_height_map.html#acd93088d0658cf8303c3971b966f4518", null ],
     [ "add", "class_t_c_o_d_height_map.html#abdedbd71b39b3bb1ec65cf20263dd24e", null ],
     [ "addFbm", "class_t_c_o_d_height_map.html#a0d1ddad13e16fbaf8d838cbb2e6bde5d", null ],

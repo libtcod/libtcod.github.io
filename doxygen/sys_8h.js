@@ -7,5 +7,5 @@ var sys_8h =
     [ "TCOD_sys_get_last_frame_length", "sys_8h.html#a2b9f8e28e717372edec11d983a1cedc3", null ],
     [ "TCOD_sys_set_fps", "sys_8h.html#aebcebab6038aa81c52e6f9877e9b6fef", null ],
     [ "TCOD_sys_sleep_milli", "sys_8h.html#ac06353704146095044cdc3e336fd0d02", null ],
-    [ "TCOD_sys_update_char", "sys_8h.html#af850423901b3483b3cdd23b72d063f6f", null ]
+    [ "TCOD_sys_update_char", "sys_8h.html#a3280164b1f9bafe1f1efe25674ebd1ac", null ]
 ];

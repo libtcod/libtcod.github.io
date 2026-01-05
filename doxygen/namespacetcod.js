@@ -3,15 +3,14 @@ var namespacetcod =
     [ "BresenhamLine", "classtcod_1_1_bresenham_line.html", "classtcod_1_1_bresenham_line" ],
     [ "ColorRGB", "structtcod_1_1_color_r_g_b.html", "structtcod_1_1_color_r_g_b" ],
     [ "ColorRGBA", "structtcod_1_1_color_r_g_b_a.html", "structtcod_1_1_color_r_g_b_a" ],
-    [ "Console", "classtcod_1_1_console.html", "classtcod_1_1_console" ],
     [ "ConsoleDeleter", "structtcod_1_1_console_deleter.html", null ],
-    [ "Context", "classtcod_1_1_context.html", "classtcod_1_1_context" ],
+    [ "Console", "classtcod_1_1_console.html", "classtcod_1_1_console" ],
     [ "ContextDeleter", "structtcod_1_1_context_deleter.html", null ],
     [ "ImageDeleter", "structtcod_1_1_image_deleter.html", null ],
-    [ "Matrix", "classtcod_1_1_matrix.html", "classtcod_1_1_matrix" ],
     [ "MatrixView", "classtcod_1_1_matrix_view.html", "classtcod_1_1_matrix_view" ],
-    [ "Tileset", "classtcod_1_1_tileset.html", "classtcod_1_1_tileset" ],
+    [ "Matrix", "classtcod_1_1_matrix.html", "classtcod_1_1_matrix" ],
     [ "TilesetDeleter", "structtcod_1_1_tileset_deleter.html", null ],
+    [ "Tileset", "classtcod_1_1_tileset.html", "classtcod_1_1_tileset" ],
     [ "Timer", "classtcod_1_1_timer.html", "classtcod_1_1_timer" ],
     [ "ConsolePtr", "namespacetcod.html#a55d1c82dffe25cb32e1aabc4414d5b54", null ],
     [ "ImagePtr", "namespacetcod.html#a60aff2039e431841c88ccbfd389b09d3", null ],
@@ -32,5 +31,5 @@ var namespacetcod =
     [ "print_rect", "group___print_u_t_f8.html#ga42b43b11911d1844c1cad80a9dab63a1", null ],
     [ "save_xp", "group___console___c_p_p.html#gad424f6477913fbf8bf1bd4a0018fb955", null ],
     [ "set_error", "namespacetcod.html#a5e599ee044670d6dc350087451a79aeb", null ],
-    [ "stringf", "namespacetcod.html#a7ed4d2aa275d26b20df9cf4b8bd5919e", null ]
+    [ "stringf", "namespacetcod.html#ab167664b720a52efebd8b3bc8a76c727", null ]
 ];

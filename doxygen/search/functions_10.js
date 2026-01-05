@@ -1,11 +1,11 @@
 var searchData=
 [
   ['save_0',['save',['../class_t_c_o_d_image.html#ac8ef8d22f312985da67c10a0fb57d294',1,'TCODImage::save()'],['../class_t_c_o_d_random.html#a602dc20d3115b0a5e19094fe86bae8e3',1,'TCODRandom::save()']]],
-  ['save_5fscreenshot_1',['save_screenshot',['../struct_t_c_o_d___context.html#a94875da0f11216315e527f12ef98ea1e',1,'TCOD_Context::save_screenshot(const char *filepath)'],['../struct_t_c_o_d___context.html#a06728882c9ce3b35b909de84ea9e60c5',1,'TCOD_Context::save_screenshot(const std::string &amp;filepath)'],['../classtcod_1_1_context.html#a63b838ee8b6132bd5a99342ec09153ba',1,'tcod::Context::save_screenshot(const std::filesystem::path &amp;path)'],['../classtcod_1_1_context.html#aab0ac0a81a7764e0719c45344d3a1b7b',1,'tcod::Context::save_screenshot()']]],
+  ['save_5fscreenshot_1',['save_screenshot',['../struct_t_c_o_d___context.html#a94875da0f11216315e527f12ef98ea1e',1,'TCOD_Context::save_screenshot(const char *filepath)'],['../struct_t_c_o_d___context.html#a06728882c9ce3b35b909de84ea9e60c5',1,'TCOD_Context::save_screenshot(const std::string &amp;filepath)']]],
   ['save_5fxp_2',['save_xp',['../group___console___c_p_p.html#gad424f6477913fbf8bf1bd4a0018fb955',1,'tcod']]],
   ['saveapf_3',['saveApf',['../class_t_c_o_d_console.html#ab1290d378fea22523807cc95e707c98a',1,'TCODConsole']]],
   ['saveasc_4',['saveAsc',['../class_t_c_o_d_console.html#af5d58ebc6a8b29a4b59b0e6afd764098',1,'TCODConsole']]],
-  ['savescreenshot_5',['saveScreenshot',['../class_t_c_o_d_system.html#a754da5fd1f6c8ab9c8e358d9e8cc7086',1,'TCODSystem']]],
+  ['savescreenshot_5',['saveScreenshot',['../class_t_c_o_d_system.html#a63cb123b704a7a6dcc259691ccbccf46',1,'TCODSystem']]],
   ['savetofile_6',['saveToFile',['../class_t_c_o_d_zip.html#a3a9bca404b704743cbafda0ae3ca8d8b',1,'TCODZip::saveToFile(const char *filename)'],['../class_t_c_o_d_zip.html#a2a7e300e5b6b34bb000ee41a38db4803',1,'TCODZip::saveToFile(const std::filesystem::path &amp;path)']]],
   ['scale_7',['scale',['../class_t_c_o_d_height_map.html#a21d15c2f159de3d6aa52c44dcde9de65',1,'TCODHeightMap::scale()'],['../class_t_c_o_d_image.html#a75f4c30a94a17ffe1aaea919469f054d',1,'TCODImage::scale()']]],
   ['scalefbm_8',['scaleFbm',['../class_t_c_o_d_height_map.html#a04db63118909c41d6b8f477ab4f6b519',1,'TCODHeightMap']]],
@@ -40,9 +40,7 @@ var searchData=
   ['size_37',['size',['../class_t_c_o_d_list.html#ab6ec9521dfe10b05aa9d4a93b310d268',1,'TCODList::size()'],['../class_t_c_o_d_path.html#a96f19da87c0462555fdd5a420ec27929',1,'TCODPath::size()']]],
   ['skipbytes_38',['skipBytes',['../class_t_c_o_d_zip.html#acd786823153b0a2fb37fdf19f108c135',1,'TCODZip']]],
   ['sleepmilli_39',['sleepMilli',['../class_t_c_o_d_system.html#a6a7ab32dc1bb1cd78a0318337f0887a0',1,'TCODSystem']]],
-  ['splitonce_40',['splitOnce',['../class_t_c_o_d_bsp.html#a6b6221bf79a1d0aa2275fa2e04b751b1',1,'TCODBsp']]],
-  ['splitrecursive_41',['splitRecursive',['../class_t_c_o_d_bsp.html#ac45a60808aa2f17d138cb10744b65ab2',1,'TCODBsp']]],
-  ['step_42',['step',['../class_t_c_o_d_line.html#aec6bd9331b10b77db7757094fdc7ba8d',1,'TCODLine']]],
-  ['stringf_43',['stringf',['../namespacetcod.html#a7ed4d2aa275d26b20df9cf4b8bd5919e',1,'tcod']]],
-  ['sync_44',['sync',['../classtcod_1_1_timer.html#a27efcadce3c589424ac1aef9b9d10ed3',1,'tcod::Timer']]]
+  ['step_40',['step',['../class_t_c_o_d_line.html#aec6bd9331b10b77db7757094fdc7ba8d',1,'TCODLine']]],
+  ['stringf_41',['stringf',['../namespacetcod.html#ab167664b720a52efebd8b3bc8a76c727',1,'tcod']]],
+  ['sync_42',['sync',['../classtcod_1_1_timer.html#a27efcadce3c589424ac1aef9b9d10ed3',1,'tcod::Timer']]]
 ];
